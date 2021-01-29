@@ -17,19 +17,15 @@
     scroll-behavior: smooth;
   }
 
-  .grid-area-container {
-    grid-template-areas: 'single';
-  }
-
-  .grid-area {
-    grid-area: single;
-  }
-
   .gradient {
     @apply bg-gradient-to-bl from-gradient-magenta to-gradient-violet;
   }
 
   .rtl {
     direction: rtl;
+  }
+
+  .circle {
+    @apply w-circle h-circle rounded-full bg-secondary-white;
   }
 }
