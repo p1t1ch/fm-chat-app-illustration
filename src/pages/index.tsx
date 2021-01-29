@@ -19,13 +19,10 @@ function IndexPage() {
             <Message>That sounds great. I’d be happy with that.</Message>
             <Message>Could you send over some pictures of your dog, please?</Message>
             <Message position="right" images={[dogImage1, dogImage2, dogImage3]} />
-            <Message position="left" images={[dogImage1, dogImage2, dogImage3]} />
             <Message position="right">Here are a few pictures. She’s a happy girl!</Message>
             <Message position="right">Can you make it?</Message>
             <Message>She looks so happy! The time we discussed works. How long shall I take her out for?</Message>
             <Message price={29}>30 minute walk</Message>
-            <Message price={49}>1 hour walk</Message>
-            <Message price={49}>1 hour walk</Message>
             <Message price={49}>1 hour walk</Message>
           </Chat>
         </section>

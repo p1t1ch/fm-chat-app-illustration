@@ -43,6 +43,7 @@ module.exports = {
         send: '1.5625rem',
         'send-arrow': '.375rem',
         '11/10': '110%',
+        'message-activity': '10rem',
       },
       height: {
         bg: '63.625rem',
@@ -62,7 +63,6 @@ module.exports = {
       },
       maxWidth: {
         message: '8rem',
-        'message-activity': '10rem',
       },
       inset: {
         '-128': '-32rem',
@@ -99,6 +99,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         profile: 'auto auto 1fr auto',
+        price: 'auto 1fr auto',
       },
       translate: {
         60: '60%',

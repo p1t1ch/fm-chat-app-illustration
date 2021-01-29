@@ -18,7 +18,7 @@
   }
 
   .gradient {
-    @apply bg-gradient-to-bl from-gradient-magenta to-gradient-violet;
+    @apply bg-gradient-to-br from-gradient-magenta to-gradient-violet;
   }
 
   .rtl {

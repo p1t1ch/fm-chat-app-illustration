@@ -35,7 +35,7 @@ function Chat({ avatar, name, status, message, children, className = '', ...prop
           </div>
         </div>
         <div className="px-screen-x pb-screen-b pt-screen-t">
-          <div className="grid gap-4 justify-items-start h-screen overflow-y-auto">{children}</div>
+          <div className="grid gap-2 justify-items-start h-screen overflow-y-auto">{children}</div>
           <div className="bg-secondary-white rounded-full pl-5 pr-1 mt-4 h-textbox flex items-center">
             <div className={`text-textbox ${message ? 'text-primary-violet-darkest' : 'text-primary-blue'} flex-grow`}>
               {message || 'Type a message...'}
