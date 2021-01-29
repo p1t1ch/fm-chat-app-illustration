@@ -42,6 +42,7 @@ module.exports = {
         circle: '.125rem',
         send: '1.5625rem',
         'send-arrow': '.375rem',
+        '11/10': '110%',
       },
       height: {
         bg: '63.625rem',
@@ -52,6 +53,9 @@ module.exports = {
         textbox: '2.125rem',
         send: '1.5625rem',
         'send-arrow': '.625rem',
+        '3/5': '60%',
+        '2/5': '40%',
+        '1/5': '20%',
       },
       gap: {
         circle: '.0625rem',
@@ -62,6 +66,9 @@ module.exports = {
       },
       inset: {
         '-128': '-32rem',
+        '-1/20': '-5%',
+        '11/20': '55%',
+        '13/20': '65%',
       },
       opacity: {
         3: '.03',
@@ -92,6 +99,15 @@ module.exports = {
       },
       gridTemplateColumns: {
         profile: 'auto auto 1fr auto',
+      },
+      translate: {
+        60: '60%',
+      },
+      rotate: {
+        '-28': '-28deg',
+        28: '28deg',
+        '-45': '-45deg',
+        45: '45deg',
       },
     },
   },

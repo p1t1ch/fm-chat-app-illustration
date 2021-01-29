@@ -18,8 +18,8 @@ function Chat({ avatar, name, status, message, children, className = '', ...prop
       <div className="rounded-chat-inner bg-primary-violet-lightest p-chat-inner">
         <div className="grid grid-cols-profile grid-rows-2 gap-x-2 items-center px-4 pb-3 pt-profile gradient rounded-tl-chat-inner rounded-tr-chat-inner rounded-br-profile rounded-bl-profile">
           <div className="row-span-full relative w-1 h-arrow">
-            <div className="absolute bg-secondary-white rounded-full" />
-            <div className="absolute bg-secondary-white rounded-full" />
+            <div className="absolute right-0 top-0 bg-secondary-white rounded-full w-1/2 h-3/5 transform translate-x-60 rotate-28" />
+            <div className="absolute right-0 bottom-0 bg-secondary-white rounded-full w-1/2 h-3/5 transform translate-x-60 -rotate-28" />
           </div>
           <img
             src={avatar}
@@ -42,8 +42,8 @@ function Chat({ avatar, name, status, message, children, className = '', ...prop
             </div>
             <div className="bg-primary-violet-darkest w-send h-send grid place-items-center rounded-full ml-4">
               <div className="relative w-send-arrow h-send-arrow">
-                <div className="absolute bg-secondary-white rounded-full" />
-                <div className="absolute bg-secondary-white rounded-full" />
+                <div className="absolute -left-1/20 top-11/20 bg-secondary-white rounded-full w-11/10 h-1/5 transform -rotate-45" />
+                <div className="absolute -left-1/20 bottom-13/20 bg-secondary-white rounded-full w-11/10 h-1/5 transform rotate-45" />
               </div>
             </div>
           </div>
