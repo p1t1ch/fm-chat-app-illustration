@@ -24,4 +24,8 @@
   .grid-area {
     grid-area: single;
   }
+
+  .gradient {
+    @apply bg-gradient-to-bl from-gradient-magenta to-gradient-violet;
+  }
 }

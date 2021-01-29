@@ -13,7 +13,8 @@ module.exports = {
         blue: 'hsl(206, 6%, 79%)',
       },
       secondary: {
-        DEFAULT: 'hsl(0, 0%, 100%)',
+        DEFAULT: 'hsl(0, 0%, 98%)',
+        white: 'hsl(0, 0%, 100%)',
         'violet-light': 'hsl(270, 20%, 96%)',
         'violet-dark': 'hsl(271, 36%, 24%)',
         magenta: 'hsl(289, 100%, 72%)',
@@ -26,6 +27,23 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Rubik', ...defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        heading: '2.5rem',
+      },
+      width: {
+        chat: '15.4375rem',
+        bg: '31.875rem',
+      },
+      height: {
+        chat: '31.5625rem',
+        bg: '63.625rem',
+      },
+      inset: {
+        '-128': '-32rem',
+      },
+      opacity: {
+        3: '.03',
       },
     },
   },
