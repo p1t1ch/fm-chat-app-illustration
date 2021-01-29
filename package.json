@@ -38,6 +38,7 @@
     "last 2 iOS major versions"
   ],
   "dependencies": {
+    "@fontsource/rubik": "^4.1.0",
     "@svgr/webpack": "^5.5.0",
     "autoprefixer": "^10.2.1",
     "focus-visible": "^5.2.0",
