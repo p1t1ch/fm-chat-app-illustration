@@ -1,34 +1,19 @@
-import React from 'react'
-import { useSpring, animated } from 'react-spring'
+import React, { useContext } from 'react'
+import { GroupContext } from '@/components/Chat'
 import toArray from '@/utils/toArray'
 
-interface MessageProps extends Omit<React.HTMLProps<HTMLDivElement>, 'ref'> {
+export interface MessageProps extends Omit<React.HTMLProps<HTMLDivElement>, 'ref'> {
   children?: React.ReactNode
-  position?: 'left' | 'right'
   price?: number
   images?: string | string[]
   startIndex?: number
 }
 
-function Message({
-  children,
-  position = 'left',
-  price,
-  images,
-  startIndex = 0,
-  className = '',
-  style,
-  ...props
-}: MessageProps) {
-  const ANIMATION_SPEED = 300
-  const springProps = useSpring({
-    transform: 'translateX(0)',
-    delay: ANIMATION_SPEED * (startIndex + 1),
-    from: { transform: `translateX(${position === 'left' ? '-100%' : '100%'})` },
-  })
+function Message({ children, price, images, className = '', ...props }: MessageProps) {
+  const { position } = useContext(GroupContext)
 
   return (
-    <animated.div
+    <div
       className={
         !images
           ? `shadow-message text-message rounded-message ${
@@ -46,7 +31,6 @@ function Message({
             } ${className}`
           : `grid grid-cols-3 gap-2 ${position === 'right' ? 'justify-self-end rtl' : ''} ${className}`
       }
-      style={{ ...springProps, ...style }}
       {...props}
     >
       {!images && price ? (
@@ -62,7 +46,7 @@ function Message({
           <img key={index} src={image} alt="" className="w-10 rounded-message shadow-message" />
         ))
       )}
-    </animated.div>
+    </div>
   )
 }
 

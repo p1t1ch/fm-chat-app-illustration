@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext } from 'react'
 
 interface ChatProps extends React.HTMLProps<HTMLDivElement> {
   avatar: string
@@ -10,7 +10,7 @@ interface ChatProps extends React.HTMLProps<HTMLDivElement> {
 
 interface GroupProps extends React.HTMLProps<HTMLDivElement> {
   children: React.ReactNode
-  startIndex?: number
+  position: 'left' | 'right'
 }
 
 function Chat({ avatar, name, status, message, children, className = '', ...props }: ChatProps) {
@@ -42,16 +42,7 @@ function Chat({ avatar, name, status, message, children, className = '', ...prop
           </div>
         </div>
         <div className="px-screen-x pb-screen-b pt-screen-t">
-          <div className="grid gap-4 content-center h-screen overflow-hidden">
-            {React.Children.map(children, (child, currentIndex) => {
-              const startIndex = React.Children.toArray(children).reduce(
-                (acc, item, index) =>
-                  React.isValidElement(item) && index < currentIndex ? acc + item.props.children.length : acc,
-                0
-              )
-              return React.isValidElement(child) && React.cloneElement(child, { startIndex })
-            })}
-          </div>
+          <div className="grid gap-4 content-center h-screen overflow-hidden">{children}</div>
           <div className="bg-secondary-white rounded-full pl-5 pr-1 mt-4 h-textbox flex items-center">
             <div className={`text-textbox ${message ? 'text-primary-violet-darkest' : 'text-primary-blue'} flex-grow`}>
               {message || 'Type a message...'}
@@ -69,32 +60,20 @@ function Chat({ avatar, name, status, message, children, className = '', ...prop
   )
 }
 
-function Me({ children, startIndex = 0, className = '', ...props }: GroupProps) {
+interface GroupContextProps {
+  position: 'left' | 'right'
+}
+
+export const GroupContext = createContext<GroupContextProps>({ position: 'left' })
+
+function Group({ children, position, className = '', ...props }: GroupProps) {
   return (
     <div className={`grid gap-2 ${className}`} {...props}>
-      {React.Children.map(
-        children,
-        (child, index) =>
-          React.isValidElement(child) && React.cloneElement(child, { startIndex: startIndex + index, position: 'left' })
-      )}
+      <GroupContext.Provider value={{ position }}>{children}</GroupContext.Provider>
     </div>
   )
 }
 
-function You({ children, startIndex = 0, className = '', ...props }: GroupProps) {
-  return (
-    <div className={`grid gap-2 ${className}`} {...props}>
-      {React.Children.map(
-        children,
-        (child, index) =>
-          React.isValidElement(child) &&
-          React.cloneElement(child, { startIndex: startIndex + index, position: 'right' })
-      )}
-    </div>
-  )
-}
-
-Chat.Me = Me
-Chat.You = You
+Chat.Group = Group
 
 export default Chat
