@@ -17,7 +17,11 @@
     scroll-behavior: smooth;
   }
 
-  .gradient {
+  .gradient-l {
+    @apply bg-gradient-to-bl from-gradient-magenta to-gradient-violet;
+  }
+
+  .gradient-r {
     @apply bg-gradient-to-br from-gradient-magenta to-gradient-violet;
   }
 

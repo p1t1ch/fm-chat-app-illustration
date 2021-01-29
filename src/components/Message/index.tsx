@@ -14,9 +14,9 @@ function Message({ children, position = 'left', price, images, className = '', .
       className={`shadow-message text-message rounded-message ${
         !price && position === 'left'
           ? 'text-primary-violet-moderate bg-primary-violet-light'
-          : !price && !images
+          : !price
           ? 'text-primary-violet-dark bg-secondary-white'
-          : 'text-secondary-white gradient'
+          : 'text-secondary-white gradient-r'
       } ${
         !price
           ? 'px-2 py-message max-w-message'
@@ -30,7 +30,7 @@ function Message({ children, position = 'left', price, images, className = '', .
         <>
           <div className="w-3 h-3 border border-secondary-magenta rounded-full" />
           <div>{children}</div>
-          <div className="font-bold text-xs">${price}</div>
+          <div className="font-bold text-xs leading-none">${price}</div>
         </>
       ) : (
         children
