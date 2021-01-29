@@ -12,3 +12,7 @@
 </p>
 
 For this challenge:
+
+1. Practice with Tailwind (round 10)
+1. Remembered Compound Components pattern and worked through whole "children" madness
+1. Used react-motion for the first time
