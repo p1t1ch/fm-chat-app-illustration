@@ -5,23 +5,24 @@ module.exports = {
   theme: {
     colors: {
       primary: {
-        DEFAULT: 'hsl(270, 7%, 64%)',
-        'violet-pale': 'hsl(276, 100%, 81%)',
-        'violet-moderate': 'hsl(276, 55%, 52%)',
-        'violet-dark': 'hsl(271, 15%, 43%)',
-        'violet-darkest': 'hsl(271, 36%, 24%)',
-        blue: 'hsl(206, 6%, 79%)',
+        DEFAULT: '#A39DA9',
+        'violet-pale': '#D99EFF',
+        'violet-moderate': '#9341C8',
+        'violet-dark': '#6E5D7E',
+        'violet-darkest': '#3E2753',
+        'violet-light': '#EEE5F4',
+        'violet-lightest': '#F5F3F7',
+        blue: '#C5C9CC',
       },
       secondary: {
-        DEFAULT: 'hsl(0, 0%, 98%)',
-        white: 'hsl(0, 0%, 100%)',
-        'violet-light': 'hsl(270, 20%, 96%)',
-        'violet-dark': 'hsl(271, 36%, 24%)',
-        magenta: 'hsl(289, 100%, 72%)',
+        DEFAULT: '#FAFAFA',
+        white: '#FFF',
+        'violet-dark': '#3E2753',
+        magenta: '#E472FF',
       },
       gradient: {
-        magenta: 'hsl(293, 100%, 63%)',
-        violet: 'hsl(264, 100%, 61%)',
+        magenta: '#E844FF',
+        violet: '#8739FF',
       },
     },
     extend: {
@@ -30,6 +31,7 @@ module.exports = {
       },
       fontSize: {
         heading: '2.5rem',
+        message: ['.5rem', 1.375],
       },
       width: {
         chat: '15.4375rem',
@@ -39,11 +41,33 @@ module.exports = {
         chat: '31.5625rem',
         bg: '63.625rem',
       },
+      maxWidth: {
+        message: '8rem',
+        'message-activity': '10rem',
+      },
       inset: {
         '-128': '-32rem',
       },
       opacity: {
         3: '.03',
+      },
+      boxShadow: {
+        DEFAULT: '0px 30px 60px -10px rgba(62, 39, 83, 0.251202)',
+        profile: '0px 0px 13px rgba(62, 39, 83, 0.251202)',
+        message: '0px 10px 5px -5px rgba(62, 39, 83, 0.045318)',
+      },
+      borderRadius: {
+        'chat-outer': '1.875rem',
+        'chat-inner': '1.25rem',
+        message: '.625rem',
+        'message-small': '.25rem',
+      },
+      padding: {
+        'chat-y': '.6875rem',
+        'chat-x': '.59375rem',
+        'chat-inner': '.0625rem',
+        message: '.375rem',
+        'message-price': '.625rem',
       },
     },
   },

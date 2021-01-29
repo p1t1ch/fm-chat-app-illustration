@@ -28,4 +28,8 @@
   .gradient {
     @apply bg-gradient-to-bl from-gradient-magenta to-gradient-violet;
   }
+
+  .rtl {
+    direction: rtl;
+  }
 }
